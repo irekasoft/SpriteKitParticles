@@ -16,23 +16,53 @@
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:0.0];
         
+        SKButton *button = [[SKButton alloc] init];
+        button.title.text= @"Snow Particle";
+        button.position = CGPointMake(160, 150);
+        [button setTouchUpTarget:self action:@selector(runSnowParticle)];
+        
+        [self addChild:button];
+        
+        button = [[SKButton alloc] init];
+        button.title.text= @"Rain Particle";
+        button.position = CGPointMake(160, 203);
+        [button setTouchUpTarget:self action:@selector(runRainParticle)];
+        
+        [self addChild:button];
         
     }
     return self;
+}
+
+- (void)runRainParticle{
+    
+    
+    NSString *myParticlePath = [[NSBundle mainBundle] pathForResource:@"RainParticle" ofType:@"sks"];
+    
+    SKEmitterNode *myParticle = [NSKeyedUnarchiver unarchiveObjectWithFile:myParticlePath];
+    myParticle.position = CGPointMake(160,568);
+//    myParticle.particleLifetime = 0;
+    
+    [self addChild:myParticle];
+}
+
+- (void)runSnowParticle{
+    
+    NSString *myParticlePath = [[NSBundle mainBundle] pathForResource:@"SnowParticle" ofType:@"sks"];
+    
+    SKEmitterNode *myParticle = [NSKeyedUnarchiver unarchiveObjectWithFile:myParticlePath];
+    myParticle.position = CGPointMake(160,568);
+//    myParticle.particleLifetime = 0;
+    
+    [self addChild:myParticle];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
     for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        NSString *myParticlePath = [[NSBundle mainBundle] pathForResource:@"SnowParticle" ofType:@"sks"];
-
-        SKEmitterNode *myParticle = [NSKeyedUnarchiver unarchiveObjectWithFile:myParticlePath];
-        myParticle.position = CGPointMake(160,568);
-        
-        [self addChild:myParticle];
+        //CGPoint location = [touch locationInNode:self];
+    
     }
 }
 

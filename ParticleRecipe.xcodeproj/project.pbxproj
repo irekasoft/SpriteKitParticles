@@ -28,6 +28,10 @@
 		A383BB8E18A0C0230091D530 /* RainParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = A383BB8C18A0C0230091D530 /* RainParticle.sks */; };
 		A383BB8F18A0C0230091D530 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A383BB8D18A0C0230091D530 /* spark.png */; };
 		A383BB9118A0C2230091D530 /* SnowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = A383BB9018A0C2230091D530 /* SnowParticle.sks */; };
+		A383BB9318A0C8F00091D530 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A383BB9218A0C8F00091D530 /* README.md */; };
+		A383BB9918A0C98A0091D530 /* square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A383BB9818A0C98A0091D530 /* square@2x.png */; };
+		A383BBA618A0CAA50091D530 /* SKButton+Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = A383BBA318A0CAA50091D530 /* SKButton+Tile.m */; };
+		A383BBA718A0CAA50091D530 /* SKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A383BBA518A0CAA50091D530 /* SKButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,12 @@
 		A383BB8C18A0C0230091D530 /* RainParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainParticle.sks; sourceTree = "<group>"; };
 		A383BB8D18A0C0230091D530 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		A383BB9018A0C2230091D530 /* SnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticle.sks; sourceTree = "<group>"; };
+		A383BB9218A0C8F00091D530 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A383BB9818A0C98A0091D530 /* square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square@2x.png"; sourceTree = "<group>"; };
+		A383BBA218A0CAA50091D530 /* SKButton+Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKButton+Tile.h"; sourceTree = "<group>"; };
+		A383BBA318A0CAA50091D530 /* SKButton+Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKButton+Tile.m"; sourceTree = "<group>"; };
+		A383BBA418A0CAA50091D530 /* SKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKButton.h; sourceTree = "<group>"; };
+		A383BBA518A0CAA50091D530 /* SKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,8 @@
 		A383BB4118A0C0090091D530 = {
 			isa = PBXGroup;
 			children = (
+				A383BB9218A0C8F00091D530 /* README.md */,
+				A383BBA118A0CAA50091D530 /* SpriteKitLibrary */,
 				A383BB5518A0C0090091D530 /* ParticleRecipe */,
 				A383BB7C18A0C00A0091D530 /* ParticleRecipeTests */,
 				A383BB4C18A0C0090091D530 /* Frameworks */,
@@ -140,6 +152,7 @@
 				A383BB6D18A0C0090091D530 /* Spaceship.png */,
 				A383BB8C18A0C0230091D530 /* RainParticle.sks */,
 				A383BB9018A0C2230091D530 /* SnowParticle.sks */,
+				A383BB9718A0C98A0091D530 /* Assets */,
 				A383BB8D18A0C0230091D530 /* spark.png */,
 				A383BB6F18A0C0090091D530 /* Images.xcassets */,
 				A383BB5618A0C0090091D530 /* Supporting Files */,
@@ -174,6 +187,25 @@
 				A383BB7F18A0C00A0091D530 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A383BB9718A0C98A0091D530 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A383BB9818A0C98A0091D530 /* square@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A383BBA118A0CAA50091D530 /* SpriteKitLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				A383BBA218A0CAA50091D530 /* SKButton+Tile.h */,
+				A383BBA318A0CAA50091D530 /* SKButton+Tile.m */,
+				A383BBA418A0CAA50091D530 /* SKButton.h */,
+				A383BBA518A0CAA50091D530 /* SKButton.m */,
+			);
+			path = SpriteKitLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +290,10 @@
 				A383BB6618A0C0090091D530 /* Main_iPad.storyboard in Resources */,
 				A383BB8F18A0C0230091D530 /* spark.png in Resources */,
 				A383BB6318A0C0090091D530 /* Main_iPhone.storyboard in Resources */,
+				A383BB9318A0C8F00091D530 /* README.md in Resources */,
 				A383BB5A18A0C0090091D530 /* InfoPlist.strings in Resources */,
 				A383BB8E18A0C0230091D530 /* RainParticle.sks in Resources */,
+				A383BB9918A0C98A0091D530 /* square@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +315,9 @@
 				A383BB6C18A0C0090091D530 /* MyScene.m in Sources */,
 				A383BB6918A0C0090091D530 /* ViewController.m in Sources */,
 				A383BB6018A0C0090091D530 /* AppDelegate.m in Sources */,
+				A383BBA618A0CAA50091D530 /* SKButton+Tile.m in Sources */,
 				A383BB5C18A0C0090091D530 /* main.m in Sources */,
+				A383BBA718A0CAA50091D530 /* SKButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
