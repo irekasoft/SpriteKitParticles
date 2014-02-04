@@ -25,6 +25,9 @@
 		A383BB7918A0C00A0091D530 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A383BB5118A0C0090091D530 /* UIKit.framework */; };
 		A383BB8118A0C00A0091D530 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A383BB7F18A0C00A0091D530 /* InfoPlist.strings */; };
 		A383BB8318A0C00A0091D530 /* ParticleRecipeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A383BB8218A0C00A0091D530 /* ParticleRecipeTests.m */; };
+		A383BB8E18A0C0230091D530 /* RainParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = A383BB8C18A0C0230091D530 /* RainParticle.sks */; };
+		A383BB8F18A0C0230091D530 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A383BB8D18A0C0230091D530 /* spark.png */; };
+		A383BB9118A0C2230091D530 /* SnowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = A383BB9018A0C2230091D530 /* SnowParticle.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		A383BB7E18A0C00A0091D530 /* ParticleRecipeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParticleRecipeTests-Info.plist"; sourceTree = "<group>"; };
 		A383BB8018A0C00A0091D530 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A383BB8218A0C00A0091D530 /* ParticleRecipeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParticleRecipeTests.m; sourceTree = "<group>"; };
+		A383BB8C18A0C0230091D530 /* RainParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainParticle.sks; sourceTree = "<group>"; };
+		A383BB8D18A0C0230091D530 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		A383BB9018A0C2230091D530 /* SnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticle.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,9 @@
 				A383BB6A18A0C0090091D530 /* MyScene.h */,
 				A383BB6B18A0C0090091D530 /* MyScene.m */,
 				A383BB6D18A0C0090091D530 /* Spaceship.png */,
+				A383BB8C18A0C0230091D530 /* RainParticle.sks */,
+				A383BB9018A0C2230091D530 /* SnowParticle.sks */,
+				A383BB8D18A0C0230091D530 /* spark.png */,
 				A383BB6F18A0C0090091D530 /* Images.xcassets */,
 				A383BB5618A0C0090091D530 /* Supporting Files */,
 			);
@@ -245,9 +254,12 @@
 			files = (
 				A383BB6E18A0C0090091D530 /* Spaceship.png in Resources */,
 				A383BB7018A0C0090091D530 /* Images.xcassets in Resources */,
+				A383BB9118A0C2230091D530 /* SnowParticle.sks in Resources */,
 				A383BB6618A0C0090091D530 /* Main_iPad.storyboard in Resources */,
+				A383BB8F18A0C0230091D530 /* spark.png in Resources */,
 				A383BB6318A0C0090091D530 /* Main_iPhone.storyboard in Resources */,
 				A383BB5A18A0C0090091D530 /* InfoPlist.strings in Resources */,
+				A383BB8E18A0C0230091D530 /* RainParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
