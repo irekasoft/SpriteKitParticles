@@ -32,6 +32,7 @@
 		A383BB9918A0C98A0091D530 /* square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A383BB9818A0C98A0091D530 /* square@2x.png */; };
 		A383BBA618A0CAA50091D530 /* SKButton+Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = A383BBA318A0CAA50091D530 /* SKButton+Tile.m */; };
 		A383BBA718A0CAA50091D530 /* SKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A383BBA518A0CAA50091D530 /* SKButton.m */; };
+		A383BBA918A0D3230091D530 /* ColorfulSnowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = A383BBA818A0D3230091D530 /* ColorfulSnowParticle.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		A383BBA318A0CAA50091D530 /* SKButton+Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKButton+Tile.m"; sourceTree = "<group>"; };
 		A383BBA418A0CAA50091D530 /* SKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKButton.h; sourceTree = "<group>"; };
 		A383BBA518A0CAA50091D530 /* SKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKButton.m; sourceTree = "<group>"; };
+		A383BBA818A0D3230091D530 /* ColorfulSnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ColorfulSnowParticle.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				A383BB6B18A0C0090091D530 /* MyScene.m */,
 				A383BB6D18A0C0090091D530 /* Spaceship.png */,
 				A383BB8C18A0C0230091D530 /* RainParticle.sks */,
+				A383BBA818A0D3230091D530 /* ColorfulSnowParticle.sks */,
 				A383BB9018A0C2230091D530 /* SnowParticle.sks */,
 				A383BB9718A0C98A0091D530 /* Assets */,
 				A383BB8D18A0C0230091D530 /* spark.png */,
@@ -289,6 +292,7 @@
 				A383BB9118A0C2230091D530 /* SnowParticle.sks in Resources */,
 				A383BB6618A0C0090091D530 /* Main_iPad.storyboard in Resources */,
 				A383BB8F18A0C0230091D530 /* spark.png in Resources */,
+				A383BBA918A0D3230091D530 /* ColorfulSnowParticle.sks in Resources */,
 				A383BB6318A0C0090091D530 /* Main_iPhone.storyboard in Resources */,
 				A383BB9318A0C8F00091D530 /* README.md in Resources */,
 				A383BB5A18A0C0090091D530 /* InfoPlist.strings in Resources */,
@@ -459,6 +463,7 @@
 				INFOPLIST_FILE = "ParticleRecipe/ParticleRecipe-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -473,6 +478,7 @@
 				INFOPLIST_FILE = "ParticleRecipe/ParticleRecipe-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -19,6 +19,7 @@
         SKButton *button = [[SKButton alloc] init];
         button.title.text= @"Snow Particle";
         button.position = CGPointMake(160, 150);
+        [button.title setFontSize:20.0];
         [button setTouchUpTarget:self action:@selector(runSnowParticle)];
         button.zPosition = 3;
         
@@ -26,6 +27,7 @@
         
         button = [[SKButton alloc] init];
         button.title.text= @"Rain Particle";
+        [button.title setFontSize:20.0];        
         button.position = CGPointMake(160, 203);
         [button setTouchUpTarget:self action:@selector(runRainParticle)];
         button.zPosition = 3;
@@ -36,47 +38,39 @@
     return self;
 }
 
-- (void)removeAllParticles{
-    
+- (void)removeAllParticles
+{
     for (SKNode *node in self.children){
-        
         if ([node isKindOfClass:[SKEmitterNode class]]){
-            
             [node removeFromParent];
-            
         }
-        
-        
     }
-    
 }
 
 - (void)runRainParticle{
     
     [self removeAllParticles];
     
-    NSLog(@"hi");
     
     NSString *myParticlePath = [[NSBundle mainBundle] pathForResource:@"RainParticle" ofType:@"sks"];
     
     SKEmitterNode *myParticle = [NSKeyedUnarchiver unarchiveObjectWithFile:myParticlePath];
     myParticle.position = CGPointMake(160,568);
-//    myParticle.particleLifetime = 0;
+    myParticle.numParticlesToEmit = 100;
     
     [self addChild:myParticle];
 }
 
 - (void)runSnowParticle{
     
-    [self removeAllParticles];    
-    
-    NSLog(@"hi");    
+    [self removeAllParticles];
     
     NSString *myParticlePath = [[NSBundle mainBundle] pathForResource:@"SnowParticle" ofType:@"sks"];
-    
     SKEmitterNode *myParticle = [NSKeyedUnarchiver unarchiveObjectWithFile:myParticlePath];
     myParticle.position = CGPointMake(160,568);
-//    myParticle.particleLifetime = 0;
+    
+    // use this to limit the ammount of particle
+    myParticle.numParticlesToEmit = 80;
     
     [self addChild:myParticle];
 }
