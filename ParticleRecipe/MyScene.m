@@ -20,6 +20,7 @@
         button.title.text= @"Snow Particle";
         button.position = CGPointMake(160, 150);
         [button setTouchUpTarget:self action:@selector(runSnowParticle)];
+        button.zPosition = 3;
         
         [self addChild:button];
         
@@ -27,6 +28,7 @@
         button.title.text= @"Rain Particle";
         button.position = CGPointMake(160, 203);
         [button setTouchUpTarget:self action:@selector(runRainParticle)];
+        button.zPosition = 3;
         
         [self addChild:button];
         
@@ -34,8 +36,26 @@
     return self;
 }
 
+- (void)removeAllParticles{
+    
+    for (SKNode *node in self.children){
+        
+        if ([node isKindOfClass:[SKEmitterNode class]]){
+            
+            [node removeFromParent];
+            
+        }
+        
+        
+    }
+    
+}
+
 - (void)runRainParticle{
     
+    [self removeAllParticles];
+    
+    NSLog(@"hi");
     
     NSString *myParticlePath = [[NSBundle mainBundle] pathForResource:@"RainParticle" ofType:@"sks"];
     
@@ -47,6 +67,10 @@
 }
 
 - (void)runSnowParticle{
+    
+    [self removeAllParticles];    
+    
+    NSLog(@"hi");    
     
     NSString *myParticlePath = [[NSBundle mainBundle] pathForResource:@"SnowParticle" ofType:@"sks"];
     
