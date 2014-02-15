@@ -6,19 +6,20 @@
 //  Copyright (c) 2014 iReka Soft. All rights reserved.
 //
 
-#import "MyScene.h"
+#import "ParticlesScene.h"
 
-@implementation MyScene
+@implementation ParticlesScene
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
+        winSize = size;
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:0.0];
         
         SKButton *button = [[SKButton alloc] init];
         button.title.text= @"Snow Particle";
-        button.position = CGPointMake(160, 150);
+        button.position = CGPointMake(size.width/2, 150);
         [button.title setFontSize:20.0];
         [button setTouchUpTarget:self action:@selector(runSnowParticle)];
         button.zPosition = 3;
@@ -28,7 +29,7 @@
         button = [[SKButton alloc] init];
         button.title.text= @"Rain Particle";
         [button.title setFontSize:20.0];        
-        button.position = CGPointMake(160, 203);
+        button.position = CGPointMake(size.width/2, 203);
         [button setTouchUpTarget:self action:@selector(runRainParticle)];
         button.zPosition = 3;
         
@@ -55,8 +56,10 @@
     NSString *myParticlePath = [[NSBundle mainBundle] pathForResource:@"RainParticle" ofType:@"sks"];
     
     SKEmitterNode *myParticle = [NSKeyedUnarchiver unarchiveObjectWithFile:myParticlePath];
-    myParticle.position = CGPointMake(160,568);
+    myParticle.position = CGPointMake(winSize.width/2,winSize.height);
     myParticle.numParticlesToEmit = 100;
+    myParticle.particlePositionRange = CGVectorMake(myParticle.particlePositionRange.dx*IF_IPAD_TWO, myParticle.particlePositionRange.dy);
+
     
     [self addChild:myParticle];
 }
@@ -65,12 +68,18 @@
     
     [self removeAllParticles];
     
-    NSString *myParticlePath = [[NSBundle mainBundle] pathForResource:@"SnowParticle" ofType:@"sks"];
-    SKEmitterNode *myParticle = [NSKeyedUnarchiver unarchiveObjectWithFile:myParticlePath];
-    myParticle.position = CGPointMake(160,568);
     
+    NSString *filename = @"SnowParticle";
+    
+    NSString *myParticlePath = [[NSBundle mainBundle] pathForResource:filename ofType:@"sks"];
+
+    
+    SKEmitterNode *myParticle = [NSKeyedUnarchiver unarchiveObjectWithFile:myParticlePath];
+    myParticle.position = CGPointMake(winSize.width/2,winSize.height);
+
     // use this to limit the ammount of particle
     myParticle.numParticlesToEmit = 80;
+    myParticle.particlePositionRange = CGVectorMake(myParticle.particlePositionRange.dx*IF_IPAD_TWO, myParticle.particlePositionRange.dy);
     
     [self addChild:myParticle];
 }

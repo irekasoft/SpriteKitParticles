@@ -8,6 +8,10 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface MyScene : SKScene
+@interface ParticlesScene : SKScene {
+    
+    CGSize winSize;
+    
+}
 
 @end

@@ -17,7 +17,7 @@
 		A383BB6318A0C0090091D530 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A383BB6118A0C0090091D530 /* Main_iPhone.storyboard */; };
 		A383BB6618A0C0090091D530 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A383BB6418A0C0090091D530 /* Main_iPad.storyboard */; };
 		A383BB6918A0C0090091D530 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A383BB6818A0C0090091D530 /* ViewController.m */; };
-		A383BB6C18A0C0090091D530 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A383BB6B18A0C0090091D530 /* MyScene.m */; };
+		A383BB6C18A0C0090091D530 /* ParticlesScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A383BB6B18A0C0090091D530 /* ParticlesScene.m */; };
 		A383BB6E18A0C0090091D530 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = A383BB6D18A0C0090091D530 /* Spaceship.png */; };
 		A383BB7018A0C0090091D530 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A383BB6F18A0C0090091D530 /* Images.xcassets */; };
 		A383BB7718A0C0090091D530 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A383BB7618A0C0090091D530 /* XCTest.framework */; };
@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A33F1B9D18AFE7E900CC8931 /* UniversalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversalHelper.h; sourceTree = "<group>"; };
 		A383BB4A18A0C0090091D530 /* ParticleRecipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleRecipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A383BB4D18A0C0090091D530 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A383BB4F18A0C0090091D530 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,8 +62,8 @@
 		A383BB6518A0C0090091D530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		A383BB6718A0C0090091D530 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A383BB6818A0C0090091D530 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A383BB6A18A0C0090091D530 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		A383BB6B18A0C0090091D530 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		A383BB6A18A0C0090091D530 /* ParticlesScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParticlesScene.h; sourceTree = "<group>"; };
+		A383BB6B18A0C0090091D530 /* ParticlesScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParticlesScene.m; sourceTree = "<group>"; };
 		A383BB6D18A0C0090091D530 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		A383BB6F18A0C0090091D530 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A383BB7518A0C0090091D530 /* ParticleRecipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParticleRecipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +108,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A33F1B9C18AFE75700CC8931 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		A383BB4118A0C0090091D530 = {
 			isa = PBXGroup;
 			children = (
@@ -143,14 +151,15 @@
 		A383BB5518A0C0090091D530 /* ParticleRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				A33F1B9C18AFE75700CC8931 /* iPad */,
 				A383BB5E18A0C0090091D530 /* AppDelegate.h */,
 				A383BB5F18A0C0090091D530 /* AppDelegate.m */,
 				A383BB6118A0C0090091D530 /* Main_iPhone.storyboard */,
 				A383BB6418A0C0090091D530 /* Main_iPad.storyboard */,
 				A383BB6718A0C0090091D530 /* ViewController.h */,
 				A383BB6818A0C0090091D530 /* ViewController.m */,
-				A383BB6A18A0C0090091D530 /* MyScene.h */,
-				A383BB6B18A0C0090091D530 /* MyScene.m */,
+				A383BB6A18A0C0090091D530 /* ParticlesScene.h */,
+				A383BB6B18A0C0090091D530 /* ParticlesScene.m */,
 				A383BB6D18A0C0090091D530 /* Spaceship.png */,
 				A383BB8C18A0C0230091D530 /* RainParticle.sks */,
 				A383BBA818A0D3230091D530 /* ColorfulSnowParticle.sks */,
@@ -203,6 +212,7 @@
 		A383BBA118A0CAA50091D530 /* SpriteKitLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				A33F1B9D18AFE7E900CC8931 /* UniversalHelper.h */,
 				A383BBA218A0CAA50091D530 /* SKButton+Tile.h */,
 				A383BBA318A0CAA50091D530 /* SKButton+Tile.m */,
 				A383BBA418A0CAA50091D530 /* SKButton.h */,
@@ -316,7 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A383BB6C18A0C0090091D530 /* MyScene.m in Sources */,
+				A383BB6C18A0C0090091D530 /* ParticlesScene.m in Sources */,
 				A383BB6918A0C0090091D530 /* ViewController.m in Sources */,
 				A383BB6018A0C0090091D530 /* AppDelegate.m in Sources */,
 				A383BBA618A0CAA50091D530 /* SKButton+Tile.m in Sources */,
@@ -461,9 +471,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParticleRecipe/ParticleRecipe-Prefix.pch";
 				INFOPLIST_FILE = "ParticleRecipe/ParticleRecipe-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -476,9 +487,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParticleRecipe/ParticleRecipe-Prefix.pch";
 				INFOPLIST_FILE = "ParticleRecipe/ParticleRecipe-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -544,6 +556,7 @@
 				A383BB8818A0C00A0091D530 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A383BB8918A0C00A0091D530 /* Build configuration list for PBXNativeTarget "ParticleRecipeTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +565,7 @@
 				A383BB8B18A0C00A0091D530 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
